@@ -1,5 +1,5 @@
 {
-  "name": "codeedu-typescript-node-stater",
+  "name": "nodejs-typescript-rabbitmq-publisher-consumer",
   "version": "1.0.0",
   "private": true,
   "scripts": {

@@ -5,7 +5,7 @@ services:
   express:
     build: ./express
     entrypoint: ./.docker/entrypoint.sh
-    container_name: nodejs-rabbitmq-express
+    container_name: nodejs-typescript-rabbitmq-publisher-consumer-express
     environment:
       - CHOKIDAR_USEPOLLING=true
     ports:
@@ -18,7 +18,7 @@ services:
   nest:
     build: ./nest
     entrypoint: ./.docker/entrypoint.sh
-    container_name: nodejs-rabbitmq-nest
+    container_name: nodejs-typescript-rabbitmq-publisher-consumer-nest
     environment:
       - CHOKIDAR_USEPOLLING=true
     ports:
@@ -30,7 +30,7 @@ services:
 
   rabbitmq:
     image: "rabbitmq:3.8-management-alpine"
-    container_name: nodejs-rabbitmq-rabbitmq
+    container_name: nodejs-typescript-rabbitmq-publisher-consumer-rabbitmq
     hostname: rabbitmq
     ports:
       - "15672:15672"
